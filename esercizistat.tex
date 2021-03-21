@@ -1,0 +1,122 @@
+% !TeX root = esercizistat.tex
+% !BIB TS-program = biber
+% !TeX encoding = UTF-8
+% !TeX spellcheck = it_IT
+\documentclass[a4paper,oneside]{book}%
+\usepackage{cmap}
+\usepackage[big]{layaureo}
+\usepackage{copyright}
+\frenchspacing%
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+\usepackage[italian]{babel}
+\usepackage[thmmarks,hyperref]{ntheorem}
+\usepackage{lmodern} % load vector font
+\usepackage[T1]{fontenc} % font encoding
+\usepackage[utf8]{inputenc} % input encoding
+\usepackage[babel=true]{microtype}
+
+\usepackage{textcomp}
+\usepackage{stand_class}
+\usepackage{tabelle}
+
+\usepackage{pagina}
+
+\setlength{\headheight}{13pt}
+\usepackage{indice}
+\usepackage{date}
+\usepackage{unita_misura}
+%\usepackage[acronyms,translate=false,nonumberlist,toc,numberedsection,counter=chapter,automake]{glossaries-extra}
+%%\glossariesextrasetup{indexcrossrefs=true}
+%\usepackage{glossary-mcols}
+%\usepackage{glossary-longragged}
+%\usepackage{glossaries-babel}
+%\makeglossaries
+%\renewcommand*{\glsxtrpostdescgeneral}{%
+%	\ifglshasfield{see}{\glscurrententrylabel}
+%	{, \glsxtrusesee{\glscurrententrylabel}}%
+%	{}%
+%}
+%
+%\setglossarystyle{altlistgroup}
+%\loadglsentries{glossario}
+%\loadglsentries{acronym}
+
+\usepackage{imakeidx}
+\makeindex[options=-s ../Mod_base/oldclaudio.sti]
+\indexsetup{level=\chapter,toclevel=chapter}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
+\usepackage[toc,page]{appendix}
+\renewcommand{\appendixtocname}{Appendici}
+
+\renewcommand{\appendixpagename}{Appendici}
+% % % % % % % % % % % % % % % % % % % % % % % % % %valore ASSoluto
+\makeatletter
+\newcommand\abs{\@ifstar\lr@abs\n@abs}
+\newcommand\lr@abs[1]{\left|#1\right|}
+\newcommand\n@abs[2][]{\mathopen{#1|}#2\mathclose{#1|}}
+\makeatother
+%\usepackage[style=italian]{csquotes}
+%\usepackage[%
+%style=philosophy-modern,
+%annotation=true,
+%hyperref,
+%backend=biber,
+%backref]{biblatex}
+%\bibliography{biblio}
+% % % % % % % % % % % % % % % %
+\usepackage[italian]{varioref}
+\usepackage{hyperxmp}
+\usepackage[pdfpagelabels]{hyperref}
+
+\usepackage[italian,noabbrev]{cleveref}
+\usepackage{miobook}
+\date{\datetime}
+
+\input{compilaTexStudio}
+\usepackage{CDloghi}
+\listfiles
+\begin{document}
+\frontmatter
+		\hypersetup{pageanchor=false}
+\begin{titlepage}\parindent=0pt
+	\centering
+	\parbox{0.8\textwidth}{\centering
+		\Lgrandedue\\[1cm]
+		\textsc{\LARGE \MIOBautore}\\[1.5cm]
+		\HRule \\[0.4cm]
+		{ \huge \bfseries \MIOBtitolo}\\[0.4cm]
+		{ \large \bfseries \MIOBsottotitolo}\\[0.4cm]
+		\HRule \\[1.5cm]
+		\vfill
+	\polylogo[5.5]{15}	
+		\makebox[\linewidth]{\centering
+			Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
+			\gitCommitterDate}}%
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\CDcopyright%
+	\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
+	\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
+	\listoffigures
+	\listoftables
+	\tableofcontents
+	\mainmatter
+\input{compilaTexStudioDue}
+\nocite{*}
+\printbibliography[heading=bibnumbered]
+
+\printindex
+\glsaddall	
+\printglossaries	
+	\appendix
+%	\include{Varianza}
+	\chapter{Mezzi usati}
+	\CDMezziUsati
+\end{document}
+
+		
