@@ -69,54 +69,56 @@
 %backref]{biblatex}
 %\bibliography{biblio}
 % % % % % % % % % % % % % % % %
+%%%%%%%%Numeri casuali
+%\usepackage[first=140, last=180]{lcg}
+
 \usepackage[italian]{varioref}
 \usepackage{hyperxmp}
 \usepackage[pdfpagelabels]{hyperref}
 
 \usepackage[italian,noabbrev]{cleveref}
+\usepackage{CDloghi}
 \usepackage{miobook}
 \date{\datetime}
 
 \input{compilaTexStudio}
-\usepackage{CDloghi}
+
 \listfiles
 \begin{document}
 \frontmatter
-		\hypersetup{pageanchor=false}
+\hypersetup{pageanchor=false}
 \begin{titlepage}\parindent=0pt
 	\centering
 	\parbox{0.8\textwidth}{\centering
-		\Lgrandedue\\[1cm]
-		\textsc{\LARGE \MIOBautore}\\[1.5cm]
-		\HRule \\[0.4cm]
-		{ \huge \bfseries \MIOBtitolo}\\[0.4cm]
-		{ \large \bfseries \MIOBsottotitolo}\\[0.4cm]
-		\HRule \\[1.5cm]
-		\vfill
-	\polylogo[5.5]{15}	
-		\makebox[\linewidth]{\centering
-			Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
-			\gitCommitterDate}}%
+	\Lgrandedue\\[1cm]
+	\textsc{\LARGE \MIOBautore}\\[1.5cm]
+	\HRule \\[0.4cm]
+	{ \huge \bfseries \MIOBtitolo}\\[0.4cm]
+	{ \large \bfseries \MIOBsottotitolo}\\[0.4cm]
+	\HRule \\[1.5cm]
+	\vfill
+	\polylogo[5.5]{7}
+	\makebox[\linewidth]{\centering
+		Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\
+		\gitCommitterDate}}%
 \end{titlepage}
 \hypersetup{pageanchor=true}
 \CDcopyright%
-	\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
-	\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
-	\listoffigures
-	\listoftables
-	\tableofcontents
-	\mainmatter
+\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
+\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
+\listoffigures
+\listoftables
+\tableofcontents
+\mainmatter
 \input{compilaTexStudioDue}
-\nocite{*}
+%\nocite{*}
 %\printbibliography[heading=bibnumbered]
-
 \printindex
 %\glsaddall	
 %\printglossaries	
-	\appendix
+\appendix
 %	\include{Varianza}
-	\chapter{Mezzi usati}
-	\CDMezziUsati
+\chapter{Mezzi usati}
+\CDMezziUsati
 \end{document}
 
-		
