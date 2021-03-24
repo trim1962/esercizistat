@@ -11,12 +11,10 @@ list-separator = {,\ \linebreak[0]}
 Durante una misurazione vengono riportate le seguenti altezze \SIlist{164; 151; 170;  150; 169; 172; 166; 178; 156; 172; 174; 161; 168; 160; 156; 179;
 	180; 172; 152; 172; 175; 166; 174; 150; 169; 150; 169}{\cm}. Determinarne  le frequenze relative e percentuali.\index{Frequenza!relativa}\index{Frequenza!percentuale}
 \end{esercizio}
-
 \begin{soluzione}
-	Per risolvere l'esercizio bisogna costruire la tabella delle frequenze relative
+	Per risolvere l'esercizio bisogna costruire la tabella delle frequenze assolute elencando le altezze e riportando nella colonna accanto quante volte quell'altezza compare nell'elenco.  Si ottiene la tabella~
 	\begin{table}
-	
-	\begin{subtable}[b]{.2\linewidth}
+		\begin{subtable}[b]{.2\linewidth}
 		\centering
 	\begin{tabular}{l>{\xstrut$}l<{$}}
 		\toprule
@@ -43,7 +41,7 @@ Durante una misurazione vengono riportate le seguenti altezze \SIlist{164; 151; 
 		Tot.&24\\
 		\bottomrule
 	\end{tabular}
-\subcaption{Frequenze assolute}\label{EsercizioUnoA}
+\subcaption{Frequenze assolute}\label{Tab:EsercizioUnoA}
 	\end{subtable}
 	\begin{subtable}[b]{.3\linewidth}
 	\centering
@@ -72,11 +70,11 @@ Durante una misurazione vengono riportate le seguenti altezze \SIlist{164; 151; 
 		Tot.&24&1\\
 		\bottomrule
 	\end{tabular}
-\subcaption{Frequenze relative}\label{fig:EsercizioUnoB}
+\subcaption{Frequenze relative}\label{Tab:EsercizioUnoB}
 \end{subtable}
 	\begin{subtable}[b]{.4\linewidth}
 		\centering
-	\begin{tabular}{ll>{\xstrut$}l<{$}l}
+	\begin{tabular}{ll>{\xstrut$}l <{$}l}
 		\toprule
 		x & n & Fr&F\%\\
 		\midrule
@@ -101,7 +99,7 @@ Durante una misurazione vengono riportate le seguenti altezze \SIlist{164; 151; 
 		Tot.&24&1&100\%\\
 		\bottomrule
 	\end{tabular}
-	\subcaption{Frequenze percentuali}\label{fig:EsercizioUnoC}
+	\subcaption{Frequenze percentuali}\label{Tab:EsercizioUnoC}
 \end{subtable}
 	\captionsetup{labelformat=empty}
 		\caption{Esercizio~\ref{EsercizioUno}}
