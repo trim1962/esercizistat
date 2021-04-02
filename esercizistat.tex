@@ -87,7 +87,15 @@
 \newcommand*{\MyNum}[1]{%
 \SI[round-mode=places,round-precision=2]{#1}{\percent}}%
 \def\xstrut{\rule[-2ex]{0pt}{5ex}}
-
+\makeatletter
+\renewcommand\frontmatter{%
+	\cleardoublepage
+	\@mainmatterfalse
+	\pagenumbering{arabic}}
+\renewcommand\mainmatter{%
+	\cleardoublepage
+	\@mainmattertrue}
+\makeatother
 \listfiles
 \begin{document}
 \frontmatter
